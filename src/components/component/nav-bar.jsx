@@ -9,9 +9,11 @@ import Link from "next/link"
 import { ModeToggle } from "./theme-toggle"
 
 const navItems = [
-  { name: "Home", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Home", href: "/" },
+  {name:"Movies", href: "/movie"},
+  {name:"TV", href: "/tv"},
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function NavBar() {
