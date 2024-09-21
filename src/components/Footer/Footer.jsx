@@ -96,9 +96,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-4 bg-indigo-50">
+      <div className="py-4 bg-indigo-50 dark:bg-gray-800">
         <div className="flex items-center justify-center">
-          <span className="text-sm text-gray-800 dark:text-white">
+          <span className="text-sm text-gray-800 dark:text-white ">
             Copyright@2024 All Right Reserved by{" "}
             <a href="">MO JA AB</a>
           </span>

@@ -13,20 +13,20 @@ const MoviesPage = ({ movie }) => {
   return (
     <div>
       <div className="flex items-center justify-center gap-x-3">
-        <h1 className="text-2xl text-center cursor-pointer text-white font-Righeous">
+        <h1 className="text-2xl text-center cursor-pointer font-Righeous text-black dark:text-white  ">
           TRENDING:{" "}
         </h1>
         <h1
-          className={`text-2xl text-center cursor-pointer hover:text-orange-600 ${
-            selectedAPI === "popular" ? "text-orange-600" : ""
+          className={`text-2xl text-center cursor-pointer text-black dark:text-white hover:text-orange-600 dark:hover:text-orange-600 ${
+            selectedAPI === "popular" ? "text-orange-600 dark:text-orange-600" : ""
           }`}
           onClick={() => handleAPIChange("popular")}
         >
           Today
         </h1>
         <h1
-          className={`text-2xl text-center cursor-pointer hover:text-orange-600 ${
-            selectedAPI === "trending" ? "text-orange-600" : ""
+          className={`text-2xl text-center cursor-pointer text-black dark:text-white hover:text-orange-600 dark:hover:text-orange-600 ${
+            selectedAPI === "trending" ? "text-orange-600 dark:text-orange-600" : ""
           }`}
           onClick={() => handleAPIChange("trending")}
         >

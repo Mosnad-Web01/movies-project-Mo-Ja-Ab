@@ -108,7 +108,7 @@ const HeroSwiper = ({ endpoint, apiKey }) => {
               className="object-cover w-full h-full"
             />
           </div>
-        </SwiperSlide>
+        </SwiperSlide >
       ))}
     </Swiper>
   );

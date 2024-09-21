@@ -26,17 +26,17 @@ const Card = ({ item }) => {
   return (
     <Link href={`/${media_type}/${id}`} className="link ">
       <div className="container">
-        <div className="wrapper hover:opacity-80">
+        <div className="wrapper hover:opacity-80 ">
           <div
             className="banner-image "
             style={{ backgroundImage: `url(${imageUrl})` }}
           ></div>
-          <h1 className="sm:text-xs lg:text-sm">
+          <h1 className="sm:text-xs lg:text-sm text-black dark:text-white">
             {" "}
             {title || original_name || original_title}
           </h1>
-          <p className="line-clamp-3">{overview}</p>
-          <p>Release Date {release_date || first_air_date}</p>
+          <p className="line-clamp-3 font-black text-black dark:text-white">{overview}</p>
+          <p className="text-black font-black dark:text-white">Release Date {release_date || first_air_date}</p>
         </div>
       </div>
     </Link>
