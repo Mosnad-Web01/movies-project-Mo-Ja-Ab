@@ -3,6 +3,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
+import { NavBar } from "@/components/component/nav-bar"
 
 export const metadata = {
   title: "Movies",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <NavBar />
           {children}
         </ThemeProvider>
       </body>
