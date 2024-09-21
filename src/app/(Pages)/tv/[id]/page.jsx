@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import DataCastSwiper from "@/app/components/dataSwiper/DataCastSwiper";
+import DataCastSwiper from "@/components/dataSwiper/DataCastSwiper";
 import "./styles.css";
 
 const TvShowsDetails = async ({ params }) => {
