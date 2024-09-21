@@ -10,48 +10,48 @@ import axios from "axios";
 import Image from "next/image";
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-const HeroSwiper = ({ endpoint, apiKey }) => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const [genres, setGenres] = useState({});
+const HeroSwiper = ({ data, genres }) => {
+  // const [data, setData] = useState([])
+  // const [error, setError] = useState(null);
+  // const [genres, setGenres] = useState({});
 
-  useEffect(() => {
-    async function fetchGenres() {
-      try {
-        const response = await axios.get(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
-        );
-        const genres = response.data.genres.reduce((acc, genre) => {
-          acc[genre.id] = genre.name;
-          return acc;
-        }, {});
-        setGenres(genres);
-      } catch (error) {
-        console.error("Error fetching genres:", error);
-      }
-    }
+  // useEffect(() => {
+  //   async function fetchGenres() {
+  //     try {
+  //       const response = await axios.get(
+  //         `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`,
+  //       );
+  //       const genres = response.data.genres.reduce((acc, genre) => {
+  //         acc[genre.id] = genre.name;
+  //         return acc;
+  //       }, {});
+  //       setGenres(genres);
+  //     } catch (error) {
+  //       console.error("Error fetching genres:", error);
+  //     }
+  //   }
 
-    async function fetchData() {
-      try {
-        const response = await axios.get(endpoint, {
-          params: {
-            api_key: apiKey,
-          },
-        });
-        setData(response.data.results);
-      } catch (error) {
-        setError(error);
-        console.error("Error fetching data:", error);
-      }
-    }
+  //   async function fetchData() {
+  //     try {
+  //       const response = await axios.get(endpoint, {
+  //         params: {
+  //           api_key: apiKey,
+  //         },
+  //       });
+  //       setData(response.data.results);
+  //     } catch (error) {
+  //       setError(error);
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   }
 
-    fetchGenres();
-    fetchData();
-  }, [endpoint, apiKey]);
+  //   fetchGenres();
+  //   fetchData();
+  // });
 
-  if (error) {
-    return <div className="text-red-500">Failed to load data.</div>;
-  }
+  // if (error) {
+  //   return <div className="text-red-500">Failed to load data.</div>;
+  // }
 
   return (
     <Swiper

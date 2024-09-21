@@ -7,7 +7,11 @@ const Hero = async () => {
 
   const response = await fetch(
     `https://api.themoviedb.org/3/trending/all/day?api_key=${tmdbAPI}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_genres=28`,
+<<<<<<< HEAD
+  );
+=======
   )
+>>>>>>> 891a0ddaf602f8ee4b04ee4896f499ae0b386a40
 
   const data = await response.json()
   const movies = data.results

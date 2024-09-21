@@ -9,12 +9,12 @@ import Footer  from "@/components/Footer/Footer"
 export const metadata = {
   title: "Movies",
   description: "Your favorite movies",
-}
+};
 
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -34,5 +34,5 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
-  )
+  );
 }

@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import axios from "axios";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./swiper.css";
@@ -13,25 +11,23 @@ import Link from "next/link";
 
 SwiperCore.use([Navigation]);
 
-const ReusableSwiper = ({ endpoint, apiKey }) => {
-  const [data, setData] = useState([]);
+export const ReusableSwiper = ({ data }) => {
+  // const data = await api.get_latest_movies
+  // const [data, setData] = useState([])
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get(endpoint, {
-          params: {
-            api_key: apiKey,
-          },
-        });
-        setData(response.data.results);
-      } catch (error) {
-        console.error(error);
-      }
-    }
+  // useEffect(() => {
+  //   const api = new Api()
+  //   async function fetchData() {
+  //     try {
+  //       const response = await api.get_latest_movies()
+  //       setData(response.results)
+  //     } catch (error) {
+  //       console.error(error)
+  //     }
+  //   }
 
-    fetchData();
-  }, [endpoint, apiKey]);
+  //   fetchData()
+  // })
 
   return (
     <div className="w-screen flex items-center justify-center px-5">
@@ -109,5 +105,3 @@ const ReusableSwiper = ({ endpoint, apiKey }) => {
     </div>
   );
 };
-
-export default ReusableSwiper;

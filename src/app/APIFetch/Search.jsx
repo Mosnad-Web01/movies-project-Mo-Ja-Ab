@@ -35,7 +35,7 @@ const Search = () => {
         <input
           type="text"
           placeholder="Search anything"
-          className="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0"
+          className="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0 text-gray-900"
           value={query}
           onChange={(e) => setQuery(e.target.value)} // Update query state on input
           name="topic"
