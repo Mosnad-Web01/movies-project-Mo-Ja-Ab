@@ -1,15 +1,12 @@
 import React from "react";
 import HeroSplide from "../Swiper/HeroSwiper";
+import { Api } from "@/lib/api";
 
-const MainSwiper = () => {
-  return (
-    <>
-      <HeroSplide
-        endpoint="https://api.themoviedb.org/3/trending/all/week"
-        apiKey={process.env.NEXT_PUBLIC_APIKEY}
-      />
-    </>
-  );
+const MainSwiper = async () => {
+  const api = new Api();
+  const data = await api.get_latest_movies();
+  const genres = await api.get_genres();
+  return <HeroSplide data={data.results} genres={genres}/>;
 };
 
 export default MainSwiper;

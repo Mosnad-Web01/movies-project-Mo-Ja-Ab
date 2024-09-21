@@ -12,7 +12,7 @@ const TvShows = () => {
 
   const fetchTVShows = async (page) => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/trending/tv/week?api_key=${tmdbAPI}&language=en-US&page=${page}`
+      `https://api.themoviedb.org/3/trending/tv/week?api_key=${tmdbAPI}&language=en-US&page=${page}`,
     );
     if (response.status === 200) {
       const data = await response.json();

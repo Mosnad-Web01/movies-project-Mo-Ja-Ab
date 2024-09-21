@@ -12,7 +12,7 @@ const PopularMoviesAPI = () => {
 
   const fetchGenres = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${tmdbAPI}&language=en-US`
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${tmdbAPI}&language=en-US`,
     );
     if (response.status === 200) {
       const data = await response.json();
@@ -26,7 +26,7 @@ const PopularMoviesAPI = () => {
 
   const fetchMovies = async (page) => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/trending/movie/day?api_key=${tmdbAPI}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${page}`
+      `https://api.themoviedb.org/3/trending/movie/day?api_key=${tmdbAPI}&language=en-US&sort_by=popularity.desc&include_adult=false&page=${page}`,
     );
     if (response.status === 200) {
       const data = await response.json();

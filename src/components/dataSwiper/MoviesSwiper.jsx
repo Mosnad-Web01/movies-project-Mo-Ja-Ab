@@ -1,13 +1,12 @@
 import React from "react";
-import ReusableSwiper from "../Swiper/Swiper";
+import { ReusableSwiper } from "../Swiper/Swiper";
+import { Api } from "@/lib/api";
 
-const MoviesSwiper = () => {
-  return (
-    <ReusableSwiper
-      endpoint="https://api.themoviedb.org/3/trending/movie/day"
-      apiKey={process.env.NEXT_PUBLIC_APIKEY}
-    />
-  );
+const MoviesSwiper = async () => {
+  const api = new Api();
+  const data = (await api.get_latest_movies()).results;
+  console.log(data);
+  return <ReusableSwiper data={data} />;
 };
 
 export default MoviesSwiper;

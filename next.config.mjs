@@ -3,6 +3,6 @@ const nextConfig = {
   images: {
     domains: ["image.tmdb.org", "rb.gy", "avatars.githubusercontent.com"],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

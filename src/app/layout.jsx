@@ -1,28 +1,25 @@
-import localFont from "next/font/local"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Inter as FontSans } from "next/font/google"
-import { cn } from "@/lib/utils"
-import { NavBar } from "@/components/component/nav-bar"
+import localFont from "next/font/local";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { NavBar } from "@/components/component/nav-bar";
 
 export const metadata = {
   title: "Movies",
   description: "Your favorite movies",
-}
+};
 
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          "min-h-screen font-sans antialiased",
-          fontSans.variable,
-        )}
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
       >
         <ThemeProvider
           attribute="class"
@@ -35,5 +32,5 @@ export default function RootLayout({ children }) {
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

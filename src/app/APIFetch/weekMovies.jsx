@@ -12,7 +12,7 @@ const TrendingMovies = () => {
 
   const fetchMovies = async (page) => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/trending/movie/day?api_key=${tmdbAPI}&page=${page}`
+      `https://api.themoviedb.org/3/trending/movie/day?api_key=${tmdbAPI}&page=${page}`,
     );
 
     if (response.status === 200) {
@@ -45,22 +45,22 @@ const TrendingMovies = () => {
   };
 
   const renderPageNumbers = () => {
-    const maxPageDisplay = 10
-    let startPage = Math.max(currentPage - 4, 1) // Dynamic start based on the current page
-    let endPage = Math.min(startPage + maxPageDisplay - 1, totalPages)
+    const maxPageDisplay = 10;
+    let startPage = Math.max(currentPage - 4, 1); // Dynamic start based on the current page
+    let endPage = Math.min(startPage + maxPageDisplay - 1, totalPages);
 
     // Adjust startPage if total pages are less than the max display
     if (endPage - startPage < maxPageDisplay - 1) {
-      startPage = Math.max(endPage - maxPageDisplay + 1, 1)
+      startPage = Math.max(endPage - maxPageDisplay + 1, 1);
     }
 
     // Create an array of page numbers to render
-    const pages = []
+    const pages = [];
     for (let page = startPage; page <= endPage; page++) {
-      pages.push(page)
+      pages.push(page);
     }
-    return pages
-  }
+    return pages;
+  };
 
   return (
     <div className="max-w-screen-3xl mx-auto py-4 px-4">
@@ -114,7 +114,7 @@ const TrendingMovies = () => {
         </button>
       </div>
     </div>
-  )
+  );
 };
 
 export default TrendingMovies;

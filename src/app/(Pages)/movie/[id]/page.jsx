@@ -1,4 +1,3 @@
-
 import DataCastSwiper from "@/components/dataSwiper/DataCastSwiper";
 import Image from "next/image";
 import React from "react";
@@ -9,7 +8,7 @@ const DetailsPage = async ({ params }) => {
   const { id } = params;
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_APIKEY}`,
-    { next: { revalidate: 60 } }
+    { next: { revalidate: 60 } },
   );
   const data = await res.json();
 
