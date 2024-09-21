@@ -1,18 +1,22 @@
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 
 const Hero = async () => {
-  const tmdbAPI = process.env.NEXT_PUBLIC_APIKEY;
-  const IMG_URL = "https://image.tmdb.org/t/p/original";
+  const tmdbAPI = process.env.NEXT_PUBLIC_APIKEY
+  const IMG_URL = "https://image.tmdb.org/t/p/original"
 
   const response = await fetch(
     `https://api.themoviedb.org/3/trending/all/day?api_key=${tmdbAPI}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_genres=28`,
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 891a0ddaf602f8ee4b04ee4896f499ae0b386a40
 
-  const data = await response.json();
-  const movies = data.results;
+  const data = await response.json()
+  const movies = data.results
 
-  const movie = movies[Math.floor(Math.random() * movies.length)];
+  const movie = movies[Math.floor(Math.random() * movies.length)]
 
   return (
     <>
@@ -41,6 +45,6 @@ const Hero = async () => {
         </div>{" "}
       </div>
     </>
-  );
-};
-export default Hero;
+  )
+}
+export default Hero

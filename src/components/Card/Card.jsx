@@ -1,9 +1,9 @@
-import React from "react";
-import "./Card.css";
-import Link from "next/link";
+import React from "react"
+import "./Card.css"
+import Link from "next/link"
 
 const Card = ({ item }) => {
-  const IMG_URL = "https://image.tmdb.org/t/p/original/";
+  const IMG_URL = "https://image.tmdb.org/t/p/original/"
 
   const {
     id,
@@ -17,11 +17,11 @@ const Card = ({ item }) => {
     poster_path,
     backdrop_path,
     poster,
-  } = item;
+  } = item
 
-  const media_type = item.media_type ? item.media_type : "tv";
+  const media_type = item.media_type ? item.media_type : "tv"
 
-  const imageUrl = IMG_URL + (poster_path || backdrop_path);
+  const imageUrl = IMG_URL + (poster_path || backdrop_path)
 
   return (
     <Link href={`/${media_type}/${id}`} className="link ">
@@ -40,7 +40,7 @@ const Card = ({ item }) => {
         </div>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
