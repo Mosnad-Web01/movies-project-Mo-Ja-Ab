@@ -6,7 +6,7 @@ const footerLinks = [
   { name: "Movies", href: "/movie" },
   { name: "TV", href: "/tv" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  // { name: "Contact", href: "/contact" },
 ]
 
 const Footer = () => {
@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
       <div className="py-4 bg-indigo-50">
         <div className="flex items-center justify-center">
-          <span className="text-sm text-gray-800 dark:text-white">
+          <span className="text-sm text-gray-800 ">
             Copyright@2024 All Right Reserved by{" "}
             <a href="">MO JA AB</a>
           </span>

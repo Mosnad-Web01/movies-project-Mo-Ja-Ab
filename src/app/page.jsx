@@ -10,11 +10,11 @@ export default function Home() {
     <div className="overflow-hidden">
       <MainSwiper />
       <Search />
-      <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold text-white">
+      <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold  text-gray-800 dark:text-foreground">
         Trending Movies
       </h1>
       <MoviesSwiper />
-      <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold text-white">
+      <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold text-gray-800 dark:text-foreground">
         Latest TV Shows
       </h1>
       <TVShowsSwiper />
