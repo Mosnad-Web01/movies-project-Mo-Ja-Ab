@@ -7,11 +7,10 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ModeToggle } from "./theme-toggle"
-
 const navItems = [
   { name: "Home", href: "/" },
-  {name:"Movies", href: "/movie"},
-  {name:"TV", href: "/tv"},
+  { name: "Movies", href: "/movie" },
+  { name: "TV", href: "/tv" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
@@ -47,7 +46,7 @@ export function NavBar() {
         </SheetContent>
       </Sheet>
       <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
-        <MountainIcon className="h-6 w-6"/>
+        <MountainIcon className="h-6 w-6" />
         <span className="sr-only">Movies</span>
       </Link>
       <nav className="ml-auto hidden lg:flex gap-6">
