@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Card from "../../components/component/Card/Card";
+import Card from "../../components/Card/Card";
 
 const TrendingMovies = () => {
   const tmdbAPI = process.env.NEXT_PUBLIC_APIKEY;

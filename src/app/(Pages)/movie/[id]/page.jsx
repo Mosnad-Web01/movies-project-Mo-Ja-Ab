@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import DataCastSwiper from "@/app/components/dataSwiper/DataCastSwiper";
 import Image from "next/image";
 import React from "react";
 import "./styles.css";
 
+=======
+import DataCastSwiper from "@/components/dataSwiper/DataCastSwiper";
+import Image from "next/image";
+import React from "react";
+import "./styles.css";
+// D:\Mosnad\frontend\project\movies-project-Mo-Ja-Ab\node_modules\next\dist\client\image-component.d.ts
+>>>>>>> 07de35d39e3b125c6889193002e17b6e9c8d24f6
 const DetailsPage = async ({ params }) => {
   const IMG_URL = "https://image.tmdb.org/t/p/original";
   const { id } = params;
