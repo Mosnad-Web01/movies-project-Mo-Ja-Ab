@@ -44,6 +44,24 @@ const TrendingMovies = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
+  const renderPageNumbers = () => {
+    const maxPageDisplay = 10
+    let startPage = Math.max(currentPage - 4, 1) // Dynamic start based on the current page
+    let endPage = Math.min(startPage + maxPageDisplay - 1, totalPages)
+
+    // Adjust startPage if total pages are less than the max display
+    if (endPage - startPage < maxPageDisplay - 1) {
+      startPage = Math.max(endPage - maxPageDisplay + 1, 1)
+    }
+
+    // Create an array of page numbers to render
+    const pages = []
+    for (let page = startPage; page <= endPage; page++) {
+      pages.push(page)
+    }
+    return pages
+  }
+
   return (
     <div className="max-w-screen-3xl mx-auto py-4 px-4">
       <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3">
@@ -69,7 +87,7 @@ const TrendingMovies = () => {
           Previous
         </button>
 
-        {Array.from({ length: 10 }, (_, index) => index + 1).map((page) => (
+        {renderPageNumbers().map((page) => (
           <button
             key={page}
             className={`mx-1 px-3 py-1 rounded-lg ${
@@ -96,7 +114,7 @@ const TrendingMovies = () => {
         </button>
       </div>
     </div>
-  );
+  )
 };
 
 export default TrendingMovies;

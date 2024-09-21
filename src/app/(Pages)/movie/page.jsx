@@ -1,23 +1,23 @@
-"use client";
-import React, { useState } from "react";
-import TrendingMovies from "@/app/APIFetch/weekMovies";
-import PopularMoviesAPI from "@/app/APIFetch/todayMoviesAPI";
+"use client"
+import React, { useState } from "react"
+import TrendingMovies from "@/app/APIFetch/weekMovies"
+import PopularMoviesAPI from "@/app/APIFetch/todayMoviesAPI"
 
 const MoviesPage = ({ movie }) => {
-  const [selectedAPI, setSelectedAPI] = useState("popular");
+  const [selectedAPI, setSelectedAPI] = useState("popular")
 
   const handleAPIChange = (apiType) => {
-    setSelectedAPI(apiType);
-  };
+    setSelectedAPI(apiType)
+  }
 
   return (
-    <div>
+    <div className="bg-background">
       <div className="flex items-center justify-center gap-x-3">
-        <h1 className="text-2xl text-center cursor-pointer text-white font-Righeous">
+        <h1 className="text-2xl text-center cursor-pointer text-foreground font-Righeous">
           TRENDING:{" "}
         </h1>
         <h1
-          className={`text-2xl text-center cursor-pointer hover:text-orange-600 ${
+          className={`text-2xl text-center cursor-pointer text-foreground hover:text-orange-600 ${
             selectedAPI === "popular" ? "text-orange-600" : ""
           }`}
           onClick={() => handleAPIChange("popular")}
@@ -25,7 +25,7 @@ const MoviesPage = ({ movie }) => {
           Today
         </h1>
         <h1
-          className={`text-2xl text-center cursor-pointer hover:text-orange-600 ${
+          className={`text-2xl text-center cursor-pointer text-foreground hover:text-orange-600 ${
             selectedAPI === "trending" ? "text-orange-600" : ""
           }`}
           onClick={() => handleAPIChange("trending")}
@@ -40,7 +40,7 @@ const MoviesPage = ({ movie }) => {
         <PopularMoviesAPI PopularMoviesAPI={movie} />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default MoviesPage;
+export default MoviesPage
