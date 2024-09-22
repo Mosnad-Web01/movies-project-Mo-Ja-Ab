@@ -14,10 +14,10 @@ export default function Home() {
       </h1>
       <MoviesSwiper />
      
-      <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold  text-gray-800 dark:text-foreground">
+      {/* <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold  text-gray-800 dark:text-foreground">
         Trending Movies
       </h1>
-      <MoviesSwiper />
+      <MoviesSwiper /> */}
       <h1 className="text-left text-4xl ml-10 mt-10 mb-10 font-bold text-gray-800 dark:text-foreground">
 
         Latest TV Shows
