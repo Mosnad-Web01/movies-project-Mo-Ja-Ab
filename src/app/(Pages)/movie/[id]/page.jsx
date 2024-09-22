@@ -81,7 +81,7 @@ const DetailsPage = async ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="py-8 bg-gray-900">
+      <div className="py-8 bg-gray-200 dark:bg-gray-900">
         <DataCastSwiper id={id} mediaType="movie" />
       </div>
     </>

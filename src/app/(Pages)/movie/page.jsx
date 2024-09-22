@@ -26,7 +26,7 @@ const MoviesPage = ({ movie }) => {
         </h1>
         <h1
           className={`text-2xl text-center cursor-pointer text-black dark:text-white hover:text-orange-600 dark:hover:text-orange-600 ${
-            selectedAPI === "trending" ? "text-orange-600 dark:text-orange-600" : ""
+            selectedAPI === "trending" ? "text-orange-600 dark:text-orange-600": ""
           }`}
           onClick={() => handleAPIChange("trending")}
         >
