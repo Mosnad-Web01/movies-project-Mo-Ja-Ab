@@ -77,7 +77,7 @@ const TvShowsDetails = async ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="py-8 bg-gray-900">
+      <div className="py-8 dark:bg-gray-900 bg-gray-200">
         <DataCastSwiper id={id} mediaType="tv" />
       </div>
     </>

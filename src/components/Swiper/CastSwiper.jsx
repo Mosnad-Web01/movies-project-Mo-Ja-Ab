@@ -39,7 +39,7 @@ const CastSwiper = ({ endpoint, apiKey, onDataChange }) => {
 
   return (
     <>
-      <h1 className="mx-auto font-bold text-2xl px-8 mt-8 mb-4 text-white ">
+      <h1 className="mx-auto font-bold text-2xl px-8 mt-8 mb-4 text-black dark:text-white">
         Cast
       </h1>
       <Swiper
